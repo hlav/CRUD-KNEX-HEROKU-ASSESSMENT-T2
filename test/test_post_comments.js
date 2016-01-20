@@ -11,7 +11,7 @@ describe('Post Comments CRUD Routes', function() {
   beforeEach(function () {
     return knex.seed.run(knex.config);
   });
-  xit('should use knex migrations', function () {
+  it('should use knex migrations', function () {
   return knex('knex_migrations').select().then(function (migrations) {
     assert.equal(migrations.length, 2);
     })
@@ -32,7 +32,7 @@ describe('Post Comments CRUD Routes', function() {
       });
     })
   });
-  xit('should POST a post comment to /posts/:post_id/comments', function(done) {
+  it('should POST a post comment to /posts/:post_id/comments', function(done) {
     var theComment = {
       'commenter': 'Oscar Wilde',
       'body': 'Be yourself; everyone else is already taken.'
